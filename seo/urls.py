@@ -17,21 +17,22 @@ from django.conf.urls import url, include
 from  post import views
 from django.conf import settings
 from django.conf.urls.static import static
-from rest_framework import routers
+#from rest_framework import routers
 
 
 app_name='post'
 
 
 
-router = routers.DefaultRouter()
-router.register(r'post_board',views.PostViewSet)
+#router = routers.DefaultRouter()
+#router.register(r'post_board',views.PostViewSet)
 
 
 urlpatterns = [
 url('api-auth/',include('rest_framework.urls')),
-url(r'^',include(router.urls)),
-
+url('',views.PostViewSet.as_view(), name='post'),
+#url(r'^',include(router.urls)),
+#url('list',views.PostViewSet.as_view()),
 
 ]
 
