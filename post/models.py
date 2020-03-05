@@ -6,8 +6,7 @@ class Posts(models.Model):
     content = models.CharField(db_column='CONTENT',max_length=1000,blank=True,null=True)
     date = models.DateField(db_column='DATE',blank=True,null=True)
 
-    def __str__(self):
-        return self.postid
+
 
 
 

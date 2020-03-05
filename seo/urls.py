@@ -30,7 +30,7 @@ router.register(r'post_board',views.PostViewSet)
 
 urlpatterns = [
 url('api-auth/',include('rest_framework.urls')),
-url(r'^$',include(router.urls)),
+url(r'^',include(router.urls)),
 
 
 ]
